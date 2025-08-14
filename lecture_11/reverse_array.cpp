@@ -16,7 +16,7 @@ int main () {
         e--;
         s++;
     }
-    cout << "element of reverse array is: " << endl;
+    cout << "Element of reverse array is: " << endl;
     for (int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++)
     {
         cout << arr[i] << " ";
