@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
-
 void count(int arr[], int size){
     int zero_count = 0;
     int one_count = 0;
