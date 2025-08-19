@@ -1,18 +1,21 @@
 #include <iostream>
 using namespace std;
 
-int binarysearch(int arr[] , int n , int target) {
+int first_occurence(int arr[] , int n , int target) {
     int start = 0;
     int end = n-1;
 
     int mid;
+    int ans =-1;
 
     while (start <= end)
     {
         mid = (start + end) / 2;
+
         if (arr[mid] == target)
         {
-            return mid;
+            ans = mid;
+            end = mid-1;
         }
         else if (target > arr[mid])
         {
@@ -24,16 +27,16 @@ int binarysearch(int arr[] , int n , int target) {
         }
         mid = (start + end) / 2;
     }
-    return -1;
+    return ans;
     
 }
 
 int main () {
-    int arr[] = {10,20,30,40,50,60,70,80,90,100};
-    int target = 30;
+    int arr[] = {10,20,30,40,60,60,60,80,90,100};
+    int target = 60;
     int n =10;
 
-    int ans = binarysearch (arr,n,target);
+    int ans = first_occurence (arr,n,target);
 
     if (ans == -1) 
     {
