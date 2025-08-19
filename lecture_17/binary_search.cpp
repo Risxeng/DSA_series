@@ -5,23 +5,24 @@ int binarysearch(int arr[] , int n , int target) {
     int start = 0;
     int end = n-1;
 
-    int mid = (start+end)/2;
+    int mid;
 
-    while (start <= end) {}
+    while (start <= end)
     {
+        mid = (start + end) / 2;
         if (arr[mid] == target)
         {
             return mid;
         }
         else if (target > arr[mid])
         {
-            start = mid+1;
+            start = mid + 1;
         }
-        else if (target < arr[mid]){
+        else
+        {
             end = mid - 1;
         }
-        mid = (start+end)/2 ;
-        
+        mid = (start + end) / 2;
     }
     return -1;
     
@@ -29,7 +30,7 @@ int binarysearch(int arr[] , int n , int target) {
 
 int main () {
     int arr[] = {10,20,30,40,50,60,70,80,90,100};
-    int target = 100;
+    int target = 30;
     int n =10;
 
     int ans = binarysearch (arr,n,target);
