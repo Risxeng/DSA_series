@@ -10,16 +10,16 @@ void print(vector<int> &v){
 }
 void bubble_sort (vector<int> &v) {
     int n = v.size();
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n-1; i++)
     {
-        int key = v[i];
-        int j = i-1;
-
-        while (j >= 0 && v[j]> key){
-            v[j+1] = v[j];
-            j--;
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (v[j] > v[j+1] )
+            {
+                swap(v[j],v[j+1]);
+            }
         }
-        v[j+1] = key;
+        
     }
     
 }
