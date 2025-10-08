@@ -22,7 +22,12 @@ int main() {
 
     storeevennumber(arr, size, index, ans);
 
+    // for(int num:ans) {
+    //     cout << num << " ";
+    // }
+
     for(int i=0; i<ans.size(); i++) {
 		cout << ans[i] << " ";
 	}
 }
+//total 11 questions are there in 31st lecture so they are in notes
