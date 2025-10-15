@@ -78,6 +78,7 @@ int main() {
     cout << (*s4).name << endl;
 
     delete s4;
+    
     return 0;
 
 }
