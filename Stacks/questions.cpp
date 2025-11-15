@@ -1,6 +1,7 @@
-#include <iostream>
-#include <stack>
-using namespace std;
+// #include <iostream>
+// #include <stack>
+// using namespace std;
+//done all four question
                 //question = 01
 // int main() {
 //     string str = "babbar";
@@ -337,9 +338,9 @@ using namespace std;
 // }
 
                     // question = 08
-int main() {
+// int main() {
 
     
 
-    return 0;
-}
+//     return 0;
+// }
