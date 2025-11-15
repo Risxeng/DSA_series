@@ -1,6 +1,7 @@
 // #include <iostream>
 // #include <stack>
 // using namespace std;
+//done all four question
                 //question = 01
 // int main() {
 //     string str = "babbar";

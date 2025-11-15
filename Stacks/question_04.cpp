@@ -2,7 +2,7 @@
 #include <vector>
 #include <stack>
 using namespace std;
-
+                    // question = 01
 bool knows(vector<vector<int>>& M, int a , int b) {
     return M[a][b] == 1;
 
@@ -64,6 +64,4 @@ int main() {
     }else{
         cout << "celebrity found: " << celeb << endl;
     }
-    
-
 }
