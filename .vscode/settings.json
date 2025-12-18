@@ -60,5 +60,6 @@
     "iostream": "cpp"
   },
   "python-envs.defaultEnvManager": "ms-python.python:system",
-  "python-envs.pythonProjects": []
+  "python-envs.pythonProjects": [],
+  "C_Cpp.errorSquiggles": "disabled"
 }
