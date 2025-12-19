@@ -16,26 +16,30 @@ class Cqueue{
         for(int i=0;i<size;i++) arr[i] = -1;
     }
     
-    // initialize storage for cleaner output
-    
     
     void push(int val) {
-        if( (rear + 1) % size == front ){
-            cout << "overflow" << endl;
+        if ((front == 0 && rear == size - 1) || (rear == front - 1)) 
+        {
+            cout << "OverFlow" << endl;
             return;
         }
-        else if(front == -1 && rear == -1){
+        else if (front == -1 && rear == -1)
+        {
             front++;
             rear++;
             arr[rear] = val;
         }
-        else if(rear == size-1 && front != 0) {
+        else if (rear == size - 1 & front != 0)
+        {
             rear = 0;
             arr[rear] = val;
-        }else{
+        }
+        else
+        {
             rear++;
             arr[rear] = val;
         }
+    
     }
     void pop(){
         if (front == -1 && rear == -1)
