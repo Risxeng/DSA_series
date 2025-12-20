@@ -1,18 +1,21 @@
-void popFront() {
-            if(front == -1 && rear ==-1){
-                cout << "Underflow" << endl;
-            }
-            else if(front == rear) {
-                arr[front] = -1;
-                front = -1;
-                rear = -1;
-            }
-            else if(front == size-1) {
-                arr[front] = -1;
-                front = 0;
-            }
-            else{
-                arr[front] = -1;
-                front++;
-            }
-        }
+void reverseKElement(queue<int> &q, int k){
+    int n = 8;
+    if(k > n || k ==0){
+        return ;
+    }
+    stack<int> s;
+    while(k--){
+        s.push(q.front());
+        q.pop();
+    }
+    while(!s.empty()){
+        q.push(s.top());
+        s.pop();
+    }
+    for (int i = 0; i < (n-k); i++)
+    {
+        int front = q.front();
+        q.pop();
+        q.push(front);
+    }
+}
