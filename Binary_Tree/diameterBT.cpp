@@ -39,18 +39,7 @@ Node* createTree() {
 }
 
 
-int maxdepth(Node* rootNode){
-    if (rootNode == NULL)
-    {
-        return 0;
-    }
 
-    int leftHeight = maxdepth(rootNode->left);
-    int rightHeight = maxdepth(rootNode->right);
-    int height = 1+max(leftHeight, rightHeight);
-
-    return height;
-}
 
 
 
@@ -59,9 +48,8 @@ int main() {
     Node* rootNode = createTree();
     cout << rootNode->data << endl;
 
-    cout << "maximum depth of the tree is:" << maxdepth(rootNode) << endl;
+    cout << "maximum depth of the tree is:" << diameter_of_binaryTree(rootNode)<< endl;
 
     return 0;
 
 }
-
