@@ -175,7 +175,7 @@ Node* delteFromBST(Node* root, int target){
             return childSubtree;
         }
         else{
-            Node* maxi = maxValue(root->left);
+            Node* maxi = maxval(root->left);
             root->data = maxi->data;
             root->left = delteFromBST(root->left, maxi->data);
             return root;
@@ -183,14 +183,13 @@ Node* delteFromBST(Node* root, int target){
         
 
     }
-    else if(target > root->data){
+    else if( root->data > target) {
         root->left = delteFromBST(root->left, target);
     }
     else{
         root->right = delteFromBST(root->right, target);
     }
-    
-    
+    return root;
 }
 
 int main(){
@@ -232,7 +231,7 @@ int main(){
         cout << endl << "Printing level Order Traversal: " << endl;
         levelOrderTraversal(root);
 
-        cout << "Enter the value of target: " << endl;
+        cout << "Enter the value to delete"<< endl;
         cin  >> target;
     }
 
