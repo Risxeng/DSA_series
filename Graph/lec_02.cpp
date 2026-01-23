@@ -3,13 +3,17 @@ using namespace std;
 
 int main() {
     int V,E; //vertices and Edges
-    cin >> V >> E;
+    cout << "number of vertices are: " << endl;
+    cin >> V;
+    cout << "number of edges are: " << endl;
+    cin >> E;
 
     vector<int> adj[V];
 
     for (int i = 0; i < E; i++)
     {
         int u, v; //u and v are two nodes connected by E
+        cout << "nodes are connected by edge  " << i << endl;
         cin >> u >> v;
         adj[u].push_back(v);
         adj[v].push_back(u);
